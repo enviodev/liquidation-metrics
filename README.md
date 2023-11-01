@@ -2,6 +2,8 @@
 
 This repo contains an example Envio indexer built using TypeScript for the Compound V2 forks across multiple chains.
 
+This repo was forked from the [original indexer](https://github.com/JossDuff/liquidation-metrics/) built by Joss Duff, one of Envio's first grantees.
+
 `LiquidateBorrow` event from the pool contracts of below Compound V2 forks are indexed, specifically storing the amount of tokens seized and liquidators.
 
 Addresses of all the pool contracts are stored in the `config.yaml` file.
