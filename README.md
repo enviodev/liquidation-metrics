@@ -1,25 +1,32 @@
-# Envio Indexer - Compound V2 Liquidation metrics
+# Envio Compound V2 Liquidation metrics example
 
-Tracking metrics on `LiquidateBorrow` events across Compound V2 forks.  Specifically amount of tokens seized and liquidators.
-Targeting Compound V2 forks because Compound V2 is one of the most forked lending protocols.
+This repo contains an example Envio indexer built using TypeScript for the Compound V2 forks across multiple chains.
 
-*Please refer to the [documentation website](https://docs.envio.dev) for a thorough guide on all Envio indexer features*
+`LiquidateBorrow` event from the pool contracts of below Compound V2 forks are indexed, specifically storing the amount of tokens seized and liquidators.
+
+Addresses of all the pool contracts are stored in the `config.yaml` file.
 
 ## Protocols indexed
-[x] Compound V2 (eth mainnnet - 1)
 
-[x] Venus (BNB - 56)
+1. Compound V2 on Ethereum Mainnet
+1. Flux Finance on Ethereum Mainnet
+1. Iron Bank on Ethereum Mainnet
+1. Strike Finance on Ethereum Mainnet
+1. Iron Bank on Optimism
+1. Sonne Finance on Optimism
+1. Benqi Lending on Avalanche C-chain
+1. Iron Bank on Avalanche C-chain
+1. Venus on BSC
 
-[x] Benqi Lending (Avalanche - 43114)
+The indexer has been built using v0.0.21 of Envio.
 
-[x] Sonne Finance (Optimism - 10)
+## Steps to run the indexer
 
-[x] Flux Finance (eth mainnet - 1)
+1. Clone the repo
+1. Install any other pre-requisite packages for Envio listed [here](https://docs.envio.dev/docs/installation#prerequisites)
+1. Install Envio via `npm i -g envio@v0.0.21`
+1. Generate indexing code via `envio codegen`
+1. Run the indexer via `envio dev` (make sure you have Docker running)
+1. Stop the indexer via `envio start`
 
-[x] Iron Bank (eth mainnet - 1)
-
-[x] Iron Bank (avalanche - 43114)
-
-[x] Iron Bank (optimism - 10)
-
-[x] Strike Finance (eth mainnet - 1)
+_Please refer to the [documentation website](https://docs.envio.dev) for a thorough guide on all Envio indexer features_
